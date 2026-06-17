@@ -31,13 +31,14 @@ export default function Services() {
       aria-label="Servicios"
     >
       <div className="mx-auto max-w-7xl px-6" ref={ref}>
+
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-dorado text-sm font-semibold uppercase tracking-[0.2em] mb-4">
+          <p className="text-dorado text-xs font-bold uppercase tracking-[0.25em] mb-4">
             Servicios
           </p>
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-vino max-w-2xl mx-auto leading-snug">
@@ -54,15 +55,16 @@ export default function Services() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group rounded-2xl border border-vino/10 bg-white p-8 hover:border-dorado/40 hover:shadow-lg transition-all duration-300"
+                className="group rounded-2xl border border-vino/10 bg-[#FAF6F0] p-8 hover:border-dorado/50 hover:shadow-lg transition-all duration-300"
               >
                 <div
-                  className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-vino/8 group-hover:bg-vino/12 transition-colors"
+                  className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-vino/6 group-hover:bg-vino/10 transition-colors"
                   aria-hidden="true"
                 >
                   <Icon
-                    className="text-vino group-hover:text-dorado transition-colors"
+                    className="text-vino group-hover:text-dorado transition-colors duration-200"
                     size={26}
+                    strokeWidth={1.5}
                   />
                 </div>
                 <h3 className="font-playfair text-xl font-bold text-vino mb-3">

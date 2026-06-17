@@ -25,7 +25,7 @@ export const hero = {
   subheadline:
     "Consultora especializada en relaciones públicas, protocolo y producción de eventos con más de tres décadas posicionando marcas, instituciones y líderes en México y el escenario internacional.",
   ctaPrimary: { label: "Hablemos por WhatsApp", href: "#contacto" },
-  ctaSecondary: { label: "Ver trayectoria", href: "#trayectoria" },
+  ctaSecondary: { label: "Ver trayectoria", href: "/trayectoria" },
   portraitAlt:
     "María Luisa Mercado Ponce, especialista en relaciones públicas y producción de eventos en Sinaloa, México",
 };

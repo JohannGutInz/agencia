@@ -3,7 +3,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Quote } from "lucide-react";
-import Placeholder from "./Placeholder";
 import { testimonials } from "@/data/content";
 
 export default function Testimonials() {
@@ -23,13 +22,13 @@ export default function Testimonials() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-dorado text-sm font-semibold uppercase tracking-[0.2em] mb-4">
+          <p className="text-dorado text-xs font-bold uppercase tracking-[0.25em] mb-4">
             Testimonios
           </p>
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-crema leading-snug">
             Lo que dicen quienes han trabajado conmigo
           </h2>
-          <p className="text-crema/40 text-xs mt-4 italic">
+          <p className="text-crema/35 text-xs mt-4 italic">
             Los testimonios a continuación son de ejemplo — reemplazar con testimonios reales.
           </p>
         </motion.div>
@@ -41,25 +40,25 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="rounded-2xl bg-vino-osc/60 border border-crema/10 p-8 flex flex-col gap-6 backdrop-blur-sm"
+              className="rounded-2xl bg-vino-osc/70 border border-crema/10 p-8 flex flex-col gap-6 backdrop-blur-sm"
             >
-              <Quote className="text-dorado/50" size={28} aria-hidden="true" />
+              <Quote className="text-dorado/60" size={26} aria-hidden="true" />
               <blockquote className="font-playfair text-crema/85 text-base leading-relaxed italic flex-1">
                 {t.quote}
               </blockquote>
-              <footer className="flex items-center gap-4">
-                {/*
-                  Para reemplazar el avatar placeholder con imagen real:
-                  1. Elimina el componente <Placeholder>
-                  2. Reemplaza con:
-                     <Image src="/avatars/nombre.jpg" alt={t.avatarAlt} width={48} height={48} className="rounded-full object-cover w-12 h-12 flex-shrink-0" />
-                */}
-                <div className="w-12 h-12 flex-shrink-0 rounded-full overflow-hidden">
-                  <Placeholder description={t.avatarAlt} ratio="1/1" />
+              <footer className="flex items-center gap-4 pt-2 border-t border-crema/10">
+                {/* Avatar placeholder — reemplazar con <Image> real */}
+                <div
+                  className="w-11 h-11 flex-shrink-0 rounded-full bg-vino/50 border border-dorado/20 flex items-center justify-center"
+                  aria-hidden="true"
+                >
+                  <span className="text-dorado/60 text-xs font-bold">
+                    {t.name.charAt(0)}
+                  </span>
                 </div>
                 <div>
-                  <p className="font-semibold text-crema text-sm">{t.name}</p>
-                  <p className="text-crema/50 text-xs">
+                  <p className="font-semibold text-crema text-sm leading-tight">{t.name}</p>
+                  <p className="text-crema/50 text-xs mt-0.5">
                     {t.role} · {t.company}
                   </p>
                 </div>

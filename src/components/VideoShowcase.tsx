@@ -18,11 +18,12 @@ export default function VideoShowcase() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-dorado text-sm font-semibold uppercase tracking-[0.2em] mb-4">
+          <p className="text-dorado text-xs font-bold uppercase tracking-[0.25em] mb-4">
             En acción
           </p>
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-crema leading-snug">
-            Más de dos décadas construyendo<br className="hidden md:block" /> experiencias que trascienden
+            Más de dos décadas construyendo
+            <br className="hidden md:block" /> experiencias que trascienden
           </h2>
         </motion.div>
 
@@ -33,10 +34,13 @@ export default function VideoShowcase() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
-          {/* Borde dorado decorativo */}
+          {/* Borde gold/navy decorativo */}
           <div
             className="absolute -inset-[3px] rounded-2xl z-0"
-            style={{ background: "linear-gradient(135deg, #C9A24B55, #6B1F3A33, #C9A24B55)" }}
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(201,162,75,0.5), rgba(27,58,92,0.3), rgba(201,162,75,0.5))",
+            }}
             aria-hidden="true"
           />
 
@@ -60,7 +64,7 @@ export default function VideoShowcase() {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <div className="h-px w-12 bg-dorado/40" />
-          <p className="text-crema/50 text-sm tracking-widest uppercase">
+          <p className="text-crema/50 text-xs tracking-widest uppercase font-medium">
             IGA Comunicación Total Consultores
           </p>
           <div className="h-px w-12 bg-dorado/40" />

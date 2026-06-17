@@ -6,11 +6,15 @@ export default function Footer() {
   return (
     <footer className="bg-vino-osc border-t border-crema/10 py-10" role="contentinfo">
       <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <p className="font-playfair text-crema/70 text-sm text-center md:text-left">
-          &copy; {year} María Luisa Mercado Ponce — IGA Comunicación Total Consultores.
-          <br className="md:hidden" />
-          <span className="md:ml-1">Todos los derechos reservados.</span>
-        </p>
+
+        <div className="text-center md:text-left">
+          <p className="font-playfair text-crema/80 text-sm">
+            &copy; {year} María Luisa Mercado Ponce
+            <span className="text-crema/40 mx-1">·</span>
+            IGA Comunicación Total Consultores
+          </p>
+          <p className="text-crema/35 text-xs mt-1">Todos los derechos reservados.</p>
+        </div>
 
         <nav aria-label="Redes sociales">
           <ul className="flex items-center gap-6">
@@ -29,6 +33,7 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
+
       </div>
     </footer>
   );

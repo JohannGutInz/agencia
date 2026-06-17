@@ -19,7 +19,7 @@ export default function TrayectoriaPage() {
       <main>
 
         {/* Encabezado de página */}
-        <section className="bg-vino-osc pt-32 pb-20">
+        <section className="bg-vino-osc pt-32 pb-24 border-b border-dorado/15">
           <div className="mx-auto max-w-7xl px-6">
             <Link
               href="/"

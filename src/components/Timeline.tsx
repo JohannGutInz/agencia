@@ -16,16 +16,14 @@ export default function Timeline() {
     >
       <div className="mx-auto max-w-5xl px-6" ref={ref}>
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          className="mb-16"
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-dorado text-sm font-semibold uppercase tracking-[0.2em] mb-4">
-            Trayectoria
-          </p>
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-crema leading-snug">
-            Tres décadas de proyectos que definen una carrera
+          <div className="h-px w-16 bg-dorado/50 mb-6" aria-hidden="true" />
+          <h2 className="font-playfair text-2xl md:text-3xl font-bold text-crema leading-snug">
+            Hitos que marcan una carrera
           </h2>
         </motion.div>
 
@@ -67,7 +65,7 @@ export default function Timeline() {
                   <h3 className="font-playfair text-lg font-bold text-crema mb-2 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-crema/60 text-sm leading-relaxed">
+                  <p className="text-crema/70 text-sm leading-relaxed">
                     {item.description}
                   </p>
                 </div>

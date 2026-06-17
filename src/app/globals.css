@@ -1,14 +1,21 @@
 @import "tailwindcss";
 
+/* ─── Sistema de color ───────────────────────────────────────────────
+   vino / vino-osc → navy profundo (autoridad, formalidad, contraste)
+   dorado          → champagne gold (acento premium)
+   crema           → blanco cálido (texto sobre fondos oscuros)
+   beige           → fondo principal (calor, elegancia)
+   gris-txt        → texto de cuerpo sobre fondos claros
+──────────────────────────────────────────────────────────────────── */
 @theme {
-  --color-vino: #6B1F3A;
-  --color-vino-osc: #4A1528;
-  --color-crema: #FAF6F0;
-  --color-dorado: #C9A24B;
-  --color-gris-txt: #3A3A3A;
+  --color-vino:     #1B3A5C;   /* navy profundo – headings, iconos, énfasis */
+  --color-vino-osc: #0F2336;   /* navy oscuro – secciones de contraste      */
+  --color-crema:    #FAF6F0;   /* crema cálida – texto sobre navy, tarjetas */
+  --color-dorado:   #C9A24B;   /* gold champagne – acento premium           */
+  --color-gris-txt: #4A453F;   /* marrón cálido oscuro – cuerpo de texto    */
 
   --font-playfair: var(--font-playfair-display), "Playfair Display", serif;
-  --font-inter: var(--font-inter-var), "Inter", sans-serif;
+  --font-inter:    var(--font-inter-var), "Inter", sans-serif;
 }
 
 html {
@@ -16,8 +23,8 @@ html {
 }
 
 body {
-  color: #3A3A3A;
-  background-color: #FAF6F0;
+  color: #4A453F;
+  background-color: #F2EBE0;   /* beige cálido premium – fondo global */
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,7 +39,6 @@ h1, h2, h3, h4 {
   outline-offset: 3px;
 }
 
-/* Animación de contadores */
 @keyframes count-up {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }

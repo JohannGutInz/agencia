@@ -9,7 +9,6 @@ function Counter({ stat, active }: { stat: Stat; active: boolean }) {
 
   useEffect(() => {
     if (!active) return;
-    const duration = 1500;
     const steps = 40;
     const increment = stat.value / steps;
     let current = 0;
@@ -21,17 +20,17 @@ function Counter({ stat, active }: { stat: Stat; active: boolean }) {
       } else {
         setCount(Math.floor(current));
       }
-    }, duration / steps);
+    }, 1500 / steps);
     return () => clearInterval(timer);
   }, [active, stat.value]);
 
   return (
     <div className="text-center">
-      <p className="font-playfair text-5xl md:text-6xl font-bold text-crema mb-2">
+      <p className="font-playfair text-5xl md:text-6xl font-bold text-crema mb-2 leading-none">
         {count}
         <span className="text-dorado">{stat.suffix}</span>
       </p>
-      <p className="text-crema/60 text-sm uppercase tracking-widest font-medium">
+      <p className="text-crema/55 text-xs uppercase tracking-widest font-medium mt-3">
         {stat.label}
       </p>
     </div>
@@ -50,7 +49,7 @@ export default function Stats() {
     >
       <div className="mx-auto max-w-7xl px-6">
         <motion.p
-          className="text-center text-dorado text-sm font-semibold uppercase tracking-[0.2em] mb-14"
+          className="text-center text-dorado text-xs font-bold uppercase tracking-[0.25em] mb-14"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6 }}
@@ -64,7 +63,7 @@ export default function Stats() {
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.12 }}
             >
               <Counter stat={stat} active={inView} />
             </motion.div>
